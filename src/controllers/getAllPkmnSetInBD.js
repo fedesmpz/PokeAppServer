@@ -5,7 +5,7 @@ const { Pokemon, Type } = require('../db')
 
 const getAllPkmnSetInBD = async (req, res) => {
     try {
-      const { data } = await axios(`${URL}?limit=1400`)
+      const { data } = await axios(`${URL}?limit=300`)
       const totalPkmns = data.results.length
       for (let i = 0; i < totalPkmns; i++) {
         const { data } = await axios(`${URL}/${i + 1}`)
